@@ -25,12 +25,12 @@ async function populateBreeds() {
   }
 }
 
-// Function to display cat information
+
 async function displayCatInfo(breedId) {
   try {
     const catData = await fetchCatByBreed(breedId);
     const cat = catData[0];
-    catImage.src = cat.url; // Встановлюємо URL зображення
+    catImage.src = cat.url;
     catName.textContent = cat.breeds[0].name;
     catDescription.textContent = cat.breeds[0].description;
     catTemperament.textContent = `Temperament: ${cat.breeds[0].temperament}`;
@@ -41,17 +41,17 @@ async function displayCatInfo(breedId) {
   }
 }
 
-// Function to hide loader
+
 function hideLoader() {
   loader.style.display = 'none';
 }
 
-// Function to show error message
+
 function showError() {
   error.style.display = 'block';
 }
 
-// Event listener for breed selection
+
 breedSelect.addEventListener('change', (event) => {
   const breedId = event.target.value;
   catInfo.style.display = 'none';
@@ -60,5 +60,5 @@ breedSelect.addEventListener('change', (event) => {
   displayCatInfo(breedId).then(hideLoader);
 });
 
-// Initialize the application
+
 populateBreeds().then(hideLoader);
