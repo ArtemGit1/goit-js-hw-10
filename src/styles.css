@@ -1,0 +1,48 @@
+/* Add your CSS styles here for styling the interface */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .breed-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .loader {
+    display: none;
+  }
+  
+  .error {
+    display: none;
+    color: red;
+  }
+  
+  .cat-info {
+    display: none;
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .cat-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .cat-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .cat-description {
+    margin-bottom: 10px;
+  }
+  
+  .cat-temperament {
+    font-style: italic;
+  }
+  
